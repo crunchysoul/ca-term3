@@ -35,13 +35,13 @@ const NavigationAuth = () => (
         </Menu.Item>
         <Menu.Item key="3">
           <Link to={routes.PRODUCTS}>
-            <Icon type="home" />
+            <Icon type="play-circle-o" />
             <span className="nav-text">Products</span>
           </Link>
         </Menu.Item>
         <Menu.Item key="4">
           <Link to={routes.DELIVERY}>
-            <Icon type="home" />
+            <Icon type="retweet" />
             <span className="nav-text">Delivery</span>
           </Link>
         </Menu.Item>
@@ -53,7 +53,7 @@ const NavigationAuth = () => (
         </Menu.Item>
         <Menu.Item key="6">
           <Link to={routes.ADMIN}>
-            <Icon type="key" />
+            <Icon type="book" />
             <span className="nav-text">Admin</span>
           </Link>
         </Menu.Item>

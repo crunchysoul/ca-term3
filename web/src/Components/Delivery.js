@@ -75,7 +75,7 @@ class Delivery extends Component {
 
       <div className="orderConfirmation">
 
-        <Row gutter={8} style={{ minHeight: '90vh' }}>
+        <Row gutter={8} style={{ minHeight: '100vh' }}>
           <Col sm={12} md={16} className="leftCol">
             {/* <img src={'http://i.imgur.com/O2EOCxf.png'} alt={'Map Example'} /> */}
             <Map

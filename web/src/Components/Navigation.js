@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Layout, Menu, Icon } from "antd";
-
 import SignOutButton from "./SignOut";
 import * as routes from "../constants/routes";
 
@@ -41,18 +40,24 @@ const NavigationAuth = () => (
           </Link>
         </Menu.Item>
         <Menu.Item key="4">
+          <Link to={routes.DELIVERY}>
+            <Icon type="home" />
+            <span className="nav-text">Delivery</span>
+          </Link>
+        </Menu.Item>
+        <Menu.Item key="5">
           <Link to={routes.ACCOUNT}>
             <Icon type="user" />
             <span className="nav-text">Account</span>
           </Link>
         </Menu.Item>
-        <Menu.Item key="5">
+        <Menu.Item key="6">
           <Link to={routes.ADMIN}>
             <Icon type="key" />
             <span className="nav-text">Admin</span>
           </Link>
         </Menu.Item>
-        <Menu.Item key="6">
+        <Menu.Item key="7">
           <Icon type="key" />
           <span className="nav-text">
             <SignOutButton />

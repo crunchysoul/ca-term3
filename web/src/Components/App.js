@@ -11,6 +11,7 @@ import ProductsPage from "./Products.js";
 import AccountPage from "./Account.js";
 import AdminPage from "./Admin.js";
 import PageNotFound from './PageNotFound.js'
+import Delivery from './Delivery.js'
 import * as routes from "../constants/routes.js";
 import withAuthentication from "./withAuthentication";
 
@@ -30,6 +31,7 @@ const App = () => (
         />
         <Route exact path={routes.HOME} component={() => <HomePage />} />
         <Route exact path={routes.PRODUCTS} component={() => <ProductsPage />} />
+        <Route exact path={routes.DELIVERY} component={() => <Delivery />} />
         <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
         <Route exact path={routes.ADMIN} component={() => <AdminPage />} />
         <Route render={({ location }) => (<Fragment>{

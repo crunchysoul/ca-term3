@@ -10,18 +10,18 @@
 }
 
 .height{
-  margin-top: 50px;
+  margin-top: 20px;
   min-height: 400px;
 }
 .rightCol {
-  top: 10vh;
+  top: 2vh;
   overflow-y: scroll;
   background-color: #999;
   color: white;
-  height: 580px;
+  height: 650px;
 }
 
 .leftCol {
-  top: 5vh;
+  top: 2vh;
 
 }

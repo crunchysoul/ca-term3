@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Navigation from "./Navigation.js";
@@ -17,9 +17,10 @@ import withAuthentication from "./withAuthentication";
 const App = () => (
   <Router>
     <div>
+      <Route exact path={routes.LANDING} component={() => <LandingPage />} />
       <Navigation />
       <Switch>
-        <Route exact path={routes.LANDING} component={() => <LandingPage />} />
+        {/* <Route exact path={routes.LANDING} component={() => <LandingPage />} /> */}
         <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
         <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
         <Route

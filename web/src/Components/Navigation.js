@@ -1,32 +1,32 @@
 import React from "react";
-import {connect} from "react-redux";
-import {Link} from "react-router-dom";
-import {Layout, Menu, Icon} from "antd";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { Layout, Menu, Icon } from "antd";
 
 import SignOutButton from "./SignOut";
 import * as routes from "../constants/routes";
 
-const {Header} = Layout;
+const { Header } = Layout;
 
-const Navigation = ({authUser}) => (
+const Navigation = ({ authUser }) => (
   <div>{authUser ? <NavigationAuth /> : <NavigationNonAuth />}</div>
 );
 
 const NavigationAuth = () => (
   <Layout>
-    <Header style={{position: "fixed", width: "100%"}}>
+    <Header style={{ position: "fixed", width: "100%" }}>
       <div className="logo" />
       <Menu
         theme="dark"
         mode="horizontal"
         defaultSelectedKeys={["2"]}
-        style={{lineHeight: "64px"}}
+        style={{ lineHeight: "64px" }}
       >
         <Menu.Item key="1">
-          <Link to={routes.LANDING}>
+          {/* <Link to={routes.LANDING}>
             <Icon type="rocket" />
             <span className="nav-text">Landing</span>
-          </Link>
+          </Link> */}
         </Menu.Item>
         <Menu.Item key="2">
           <Link to={routes.HOME}>
@@ -68,7 +68,7 @@ const NavigationNonAuth = () => (
     theme="dark"
     mode="horizontal"
     defaultSelectedKeys={["2"]}
-    style={{lineHeight: "64px"}}
+    style={{ lineHeight: "64px" }}
   >
     <Menu.Item key="1">
       <Link to={routes.LANDING}>
@@ -85,6 +85,6 @@ const NavigationNonAuth = () => (
   </Menu>
 );
 
-const mapStateToProps = state => ({authUser: state.sessionState.authUser});
+const mapStateToProps = state => ({ authUser: state.sessionState.authUser });
 
 export default connect(mapStateToProps)(Navigation);

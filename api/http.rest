@@ -1,0 +1,78 @@
+# Host:
+http://127.0.0.1:7000
+
+# # Query:
+
+# # Need to have RESTful method to routes:
+# GET /products
+# GET /orders/5a5b0675a49c0e6ded091251
+
+# PATCH /products/5a59ab8f5c228e42018e51b6
+# [
+# 	{
+# 		"propName": "price",
+# 		"value": "300"
+# 	}
+# ]
+# {
+	# 	"name": "foo"
+	# }
+
+# POST /users/login
+# {
+# 	"email": "foo2@foo.foo",
+# 	"password": "password"
+# }
+
+POST /products
+{
+
+}
+
+# Cache-Control: no-cache
+# Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+#
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="price"
+#
+#
+# POST /products
+# 33
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="name"
+#
+# wow
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="productImage"; filename="adventure-time.jpg"
+# Content-Type: image/jpeg
+#
+#
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW-- 
+
+# DELETE /products/5a5ae0ef1247295251b7f3e6
+
+	# # Optional headers specification
+	# Content-Type: application/json; charset=utf-8
+
+	# # Register
+	# POST /auth/register
+	# {
+		#   "email": "foo@bar.com",
+		#   "firstName": "Foo",
+		#   "lastName": "Bar",
+		#   "password": "password123"
+		# }
+
+		# #Login
+		# POST /auth
+		# {
+			#   "email": "foo@bar.com",
+			#   "password": "password123"
+			# }
+
+			# # RESTful with auth:
+			# Accept: */*
+			# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZvb0BiYXIuY29tIiwiaWF0IjoxNTEyNTM0NjMyLCJleHAiOjE1MTMxMzk0MzIsInN1YiI6IjVhMjc1OTI1YmI1NzRmM2E0ZmFhYzExMiJ9.xE80l4Qz2nFNWrE1diI2i4BIyyHLlHASH6O9qXpeKWQ
+			#
+			# GET /products
+

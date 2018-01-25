@@ -1,7 +1,17 @@
 import React from "react";
 import {connect} from "react-redux";
 import {compose} from "recompose";
-import {List, Pagination, Layout, Menu, Icon, Card, Avatar} from "antd";
+import {
+  Row,
+  Col,
+  List,
+  Pagination,
+  Layout,
+  Menu,
+  Icon,
+  Card,
+  Avatar,
+} from "antd";
 import withAuthorization from "./withAuthorization.js";
 import {listProducts, createProduct, updateProduct} from "../api/products";
 import ProductsList from "./ProductsList.js";
@@ -37,9 +47,7 @@ class ProductsPage extends React.Component {
   }
 
   render() {
-    console.log({products});
     const {count, products} = this.state;
-    console.log({products});
 
     return (
       <Content
@@ -47,38 +55,38 @@ class ProductsPage extends React.Component {
           background: "#fff",
           padding: "0 50px",
           marginTop: 64,
-          minHeight: 280,
         }}
       >
         <h1>Products Page</h1>
         <p>Total Products: {count}</p>
-        {products.map(product => (
-          <List.Item>
-            <Card
-              style={{width: 300}}
-              cover={
-                <img
-                  alt="example"
-                  src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                />
-              }
-              actions={[
-                <Icon type="setting" />,
-                <Icon type="edit" />,
-                <Icon type="ellipsis" />,
-              ]}
-            >
-              <Meta
-                avatar={
-                  <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                }
-                title={product.name}
-                description="This is the description"
-              />
-            </Card>
-          </List.Item>
-        ))}
-        {/* {products.map(product => <List.Item>{product.name}</List.Item>)} */}
+        <Row gutter={16}>
+          {products.map(product => (
+            <Col span={6}>
+              <List.Item>
+                <Card
+                  hoverable
+                  style={{width: 300}}
+                  cover={
+                    <img
+                      alt="example"
+                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                    />
+                  }
+                  actions={[
+                    <Icon type="minus" />,
+                    <Icon type="edit" />,
+                    <Icon type="plus" />,
+                  ]}
+                >
+                  <Meta
+                    title={product.name}
+                    description={product.description}
+                  />
+                </Card>
+              </List.Item>
+            </Col>
+          ))}
+        </Row>
       </Content>
     );
   }

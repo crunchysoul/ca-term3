@@ -6,7 +6,7 @@ productsGetAll = (req, res, next) => {
     // For pagination purpose
     // Product.find().limit()
 
-    .select("name price productImage")
+    .select("name price productImage description")
     .then(products => {
       const response = {
         count: products.length,
